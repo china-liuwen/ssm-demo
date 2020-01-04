@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <resultMap id="deptResultMap" type="con.entity.DeptEntity">
+        <id property="id" column="id"></id>
+        <result property="deptname" column="deptname"></result>
+    </resultMap>
+
+    <insert id="insert">
+        insert into dept(deptname) values (#{deptname})
+    </insert>
+
+    <delete id="delete">
+        delete from dept where id=#{id}
+    </delete>
+
+    <update id="update">
+        update dept set deptname=#{deptname} where id = #{id}
+    </update>
+
+    <select id="getAll" resultMap="deptResultMap">
+        select * from dept
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
